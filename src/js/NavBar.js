@@ -1,15 +1,23 @@
 import React from 'react';
+import {cyan500} from 'material-ui/styles/colors';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: cyan500,
+  },
+  appBar: {
+    height: 100,
+  },
+});
+
+// MuiThemeProvider takes the theme as a property and passed it down the hierarchy.
 const NavBar = () => (
-  <AppBar
-    title="Fuel Calculator"
-    style={{ backgroundColor: {red500} }}
-  />
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <AppBar title="My AppBar" />
+  </MuiThemeProvider>
 );
 
 export default NavBar;

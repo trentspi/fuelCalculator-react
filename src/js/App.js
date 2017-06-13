@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import NavBar from './NavBar';
+import React from 'react';
+import AppBar from 'material-ui/AppBar';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-      <MuiThemeProvider>
-        <NavBar />
-      </MuiThemeProvider>
-      </div>
-    );
-  }
-}
+/**
+ * A simple example of `AppBar` with an icon on the right.
+ * By default, the left icon is a navigation-menu.
+ */
+const App = () => (
+  <AppBar
+    title="Title"
+    iconClassNameRight="muidocs-icon-navigation-expand-more"
+  />
+);
 
 export default App;
