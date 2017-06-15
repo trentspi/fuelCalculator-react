@@ -1,1 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
+Re-created my [first fuel calculator](https://github.com/trentspi/fuelcalculator) with React.
+
+
